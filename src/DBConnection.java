@@ -6,7 +6,7 @@ public class DBConnection {
     public static Connection getConnection(){
         String url = "jdbc:mysql://localhost:3306/studentdb";
         String username = "root";
-        String password = "Rockranger";
+        String password = System.getenv("DB_PASSWORD");
 
         try{
             Connection connection = DriverManager.getConnection(url, username, password);
